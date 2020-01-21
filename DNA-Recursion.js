@@ -22,16 +22,33 @@
 //     const test = powerCalc(2, 4);
 //     console.log(test);
 
-const reverseString = function(str) {
-  if(str.length === 0) {
-    return '';
-  } else {
-    return str[str.length - 1] + reverseString(str.substring(0, str.length -1));
-  }
-};
+// const reverseString = function(str) {
+//   if(str.length === 0) {
+//     return '';
+//   } else {
+//     return str[str.length - 1] + reverseString(str.substring(0, str.length -1));
+//   }
+// };
 
-let test = 'cat';
-console.log(reverseString(test));
+// let test = 'cat';
+// console.log(reverseString(test));
+
+
+
+
+
+
+// function stringSplitter(str, char) {
+//     if(!str) return []; 
+//     let arr=[]; 
+//     let i=0;
+//     while(str[i++] !== char && i <= str.length);
+//     arr.push(str.substr(0, i-1));
+//     return arr.concat(stringSplitter(str.substr(i),char));
+// }
+
+// console.log('string split: ', stringSplitter('02/20/2020', '/'));
+
 
     
    
