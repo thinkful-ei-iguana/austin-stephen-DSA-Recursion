@@ -72,3 +72,17 @@
 // }
 
 // console.log(fib(7))
+
+//input= 5
+//output= 120
+
+const getFactorial = function(num) {
+  if (num <= 1) {
+    return 1;
+  } else {
+    return num * getFactorial(num - 1);
+  }
+};
+
+const test = getFactorial(5);
+console.log(test);
