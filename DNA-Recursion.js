@@ -76,13 +76,43 @@
 //input= 5
 //output= 120
 
-const getFactorial = function(num) {
-  if (num <= 1) {
-    return 1;
-  } else {
-    return num * getFactorial(num - 1);
-  }
-};
+// const getFactorial = function(num) {
+//   if (num <= 1) {
+//     return 1;
+//   } else {
+//     return num * getFactorial(num - 1);
+//   }
+// };
 
-const test = getFactorial(5);
-console.log(test);
+// const test = getFactorial(5);
+// console.log(test);
+
+let maze = [["", "", "*"],
+            ["*", "", "*"],
+            ["", "", "e"]]
+
+let solveMaze = function(maze, row, column, path) {
+    if (maze[row][column] === "e") {
+        return path;
+    }
+
+    if(maze[row] [column] === "*" || column > maze.length || row > maze.length || column < 0 || row < 0) {
+        return false;
+    }
+
+    if(maze[row] [column] === "") {
+        if (maze[row] [column + 1] === "") {
+            return "R" + solveMaze(maze, row, column++, path)
+        } else if (maze[row] [column -1] === "") {
+            return "L" + solveMaze(maze, row, --column)
+        } else if (maze[row - 1] [column] === "") {
+            return "U" + solveMaze(maze, --row, column)
+        } else if (maze[row + 1] [column] === "") {
+            return "D" + solveMaze(maze, row++, column)
+        }
+    }
+    console.log(path)
+    return path;
+}
+
+console.log('solvemaze:', (solveMaze(maze, 0, 0, [])))
