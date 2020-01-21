@@ -58,3 +58,17 @@
 
 // const test = 6;
 // console.log(triangularNum(test));
+
+
+// function fib(n) {
+//     if (n === 1 ) {
+//         return [0, 1];
+//     } else {
+//         let series = fib(n-1);
+//         series.push(series[series.length -1] + 
+//         series[series.length -2]);
+//         return series
+//     }
+// }
+
+// console.log(fib(7))
