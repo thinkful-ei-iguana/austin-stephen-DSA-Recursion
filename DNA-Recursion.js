@@ -46,15 +46,15 @@
 
 //input = 4
 //output = 10
-const triangularNum = function(num) {
-  if (num <= 0) {
-    return 'Number must be 1 or higher';
-  } else if (num === 1) {
-    return 1;
-  } else {
-    return num + triangularNum(num - 1);
-  }
-};
+// const triangularNum = function(num) {
+//   if (num <= 0) {
+//     return 'Number must be 1 or higher';
+//   } else if (num === 1) {
+//     return 1;
+//   } else {
+//     return num + triangularNum(num - 1);
+//   }
+// };
 
-const test = 6;
-console.log(triangularNum(test));
+// const test = 6;
+// console.log(triangularNum(test));
