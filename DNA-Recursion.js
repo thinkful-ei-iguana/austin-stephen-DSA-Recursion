@@ -87,32 +87,61 @@
 // const test = getFactorial(5);
 // console.log(test);
 
-let maze = [["", "", "*"],
-            ["*", "", "*"],
-            ["", "", "e"]]
+// let maze = [["", "", "*"],
+//             ["*", "", "*"],
+//             ["", "", "e"]]
 
-let solveMaze = function(maze, row, column, path) {
-    if (maze[row][column] === "e") {
-        return path;
-    }
+// let solveMaze = function(maze, row, column, path) {
+//     if (maze[row][column] === "e") {
+//         return path;
+//     }
 
-    if(maze[row] [column] === "*" || column > maze.length || row > maze.length || column < 0 || row < 0) {
-        return false;
-    }
+//     if(maze[row] [column] === "*" || column > maze.length || row > maze.length || column < 0 || row < 0) {
+//         return false;
+//     }
 
-    if(maze[row] [column] === "") {
-        if (maze[row] [column + 1] === "") {
-            return "R" + solveMaze(maze, row, column++, path)
-        } else if (maze[row] [column -1] === "") {
-            return "L" + solveMaze(maze, row, --column)
-        } else if (maze[row - 1] [column] === "") {
-            return "U" + solveMaze(maze, --row, column)
-        } else if (maze[row + 1] [column] === "") {
-            return "D" + solveMaze(maze, row++, column)
-        }
+//     if(maze[row] [column] === "") {
+//         if (maze[row] [column + 1] === "") {
+//             return "R" + solveMaze(maze, row, column++, path)
+//         } else if (maze[row] [column -1] === "") {
+//             return "L" + solveMaze(maze, row, --column)
+//         } else if (maze[row - 1] [column] === "") {
+//             return "U" + solveMaze(maze, --row, column)
+//         } else if (maze[row + 1] [column] === "") {
+//             return "D" + solveMaze(maze, row++, column)
+//         }
+//     }
+//     console.log(path)
+//     return path;
+// }
+
+// console.log('solvemaze:', (solveMaze(maze, 0, 0, [])))
+
+
+// function findPerms(str) {
+//     if (str.length === 1) return [str]
+    
+//     let all = []
+//     for (let i = 0; i < str.length; i++) {
+//       const currentLetter = str[i]
+      
+//       const remainingLetters = str.slice(0,i) + str.slice(i+1)
+//       const permsOfRemainingLetters = findPerms(remainingLetters)
+      
+//       permsOfRemainingLetters.forEach(subPerm => {
+//         all.push(currentLetter + subPerm)    
+//       })  
+//     }
+//     return all
+//   }
+  
+//   console.log("permutations: ", findPerms("jim"))
+
+
+function binaryRep(num) {
+    if(num<=0) {
+        return ''
     }
-    console.log(path)
-    return path;
+    const binary = num % 2;
+    return binaryRep(Math.floor(num/2)) + binary
 }
-
-console.log('solvemaze:', (solveMaze(maze, 0, 0, [])))
